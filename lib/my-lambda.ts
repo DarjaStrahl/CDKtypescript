@@ -1,5 +1,5 @@
 import * as cdk from "@aws-cdk/core";
-import * as lambda from 'aws-cdk-lib/aws-lambda';
+import * as lambda from "@aws-cdk/aws-lambda";
 import * as path from 'path';
 
 
@@ -14,7 +14,7 @@ export class CdkStarterStack extends cdk.Stack {
             memorySize: 1024,
             timeout: cdk.Duration.seconds(5),
             handler: 'index.main',
-            code: lambda.Code.fromAsset(path.join(__dirname, '/../src/index')),
+            code: lambda.Code.fromAsset(path.join(__dirname, '/../src')),
             environment: {
                 REGION: cdk.Stack.of(this).region,
                 AVAILABILITY_ZONES: JSON.stringify(
