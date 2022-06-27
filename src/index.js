@@ -15,7 +15,7 @@ const configs = [{
     },
     ]
 
-exports.main = async (event) => {
+exports.handler = async (event) => {
     // Display user's balance
     let eurBalance = (await kraken.api('Balance')).result.ZEUR
     console.log( 'eurBalance', eurBalance );
@@ -60,4 +60,4 @@ exports.main = async (event) => {
 
     }
 
-}
+};

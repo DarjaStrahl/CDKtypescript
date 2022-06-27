@@ -13,7 +13,7 @@ export class CdkStarterStack extends cdk.Stack {
             runtime: lambda.Runtime.NODEJS_14_X,
             memorySize: 1024,
             timeout: cdk.Duration.seconds(5),
-            handler: 'index.main',
+            handler: 'index.handler',
             code: lambda.Code.fromAsset(path.join(__dirname, '/../src')),
             environment: {
                 REGION: cdk.Stack.of(this).region,
